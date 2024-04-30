@@ -1,0 +1,11 @@
+body{
+   background-size: cover;
+   height: 99vh;
+   flex-direction: column;
+   align-items: center;
+   width: 100%;
+   font-weight: 200;
+   background-color: ;
+   justify-content: space-around;
+   padding: 20%;
+    display: grid; grid-template-columns: repeat(3, 1fr);
