@@ -155,3 +155,33 @@ console.log(promedio(10,5)); */
 // }
 
 // console.log(numeroMayor(15,20,30));
+
+//EJERCICIO 7
+
+/* 
+function generar_caracteres (numero, caracter){
+    let i = 0;
+    while (i <= numero){
+      numero +=caracter
+    }
+}
+
+let gen = generar_caracteres(5, "n");
+console.log(gen); */
+
+//EJERCICIO 8
+
+function sumarNumero (numeroo){
+  let i = 1;
+  let suma = 0;
+
+  while (i <= numeroo){
+      suma += i;
+      i++;
+
+      return `La suma de los números enteros positivos desde 1 hasta ${numeroo} es: ${suma}`
+  }
+}
+
+let sum = sumarNumero(20);
+console.log(sum);
