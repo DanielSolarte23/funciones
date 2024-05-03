@@ -138,40 +138,36 @@ console.log(promedio(10,5)); */
 
 //EJERCICIO 6
 
-// const numeroMayor = function (n1, n2 , n3){
-//   if (n1 > n2 && n2 > n3) {
-//         return `El numero ${n1} es mayor el ${n2} es el medio y ${n3} el menor`;
-//     } else if (n1 > n3 && n3 > n2) {
-//         return `El numero ${n1} es mayor el ${n3} es el medio y ${n2} el menor`;
-//     } else if (n2 > n1 && n1 > n3) {
-//         return `El numero ${n2} es mayor el ${n1} es el medio y ${n3} el menor`;
-//     } else if (n2 > n3 && n3 > n1) {
-//         return `El numero ${n2} es mayor el ${n3} es el medio y ${n1} el menor`;
-//     } else if (n3 > n1 && n1 > n2) {
-//         return `El numero ${n3} es mayor el ${n1} es el medio y ${n2} el menor`;
-//     } else if (n3 > n2 && n2 > n1) {
-//         return `El numero ${n3} es mayor el ${n2} es el medio y ${n1} el menor`;
-//     }
-// }
+/* const numeroMayor = function (n1, n2 , n3){
+  if (n1 > n2 && n2 > n3) {
+        return `El numero ${n1} es mayor el ${n2} es el medio y ${n3} el menor`;
+    } else if (n1 > n3 && n3 > n2) {
+        return `El numero ${n1} es mayor el ${n3} es el medio y ${n2} el menor`;
+    } else if (n2 > n1 && n1 > n3) {
+        return `El numero ${n2} es mayor el ${n1} es el medio y ${n3} el menor`;
+    } else if (n2 > n3 && n3 > n1) {
+        return `El numero ${n2} es mayor el ${n3} es el medio y ${n1} el menor`;
+    } else if (n3 > n1 && n1 > n2) {
+        return `El numero ${n3} es mayor el ${n1} es el medio y ${n2} el menor`;
+    } else if (n3 > n2 && n2 > n1) {
+        return `El numero ${n3} es mayor el ${n2} es el medio y ${n1} el menor`;
+    }
+} */
 
 // console.log(numeroMayor(15,20,30));
 
 //EJERCICIO 7
 
-/* 
-function generar_caracteres (numero, caracter){
-    let i = 0;
-    while (i <= numero){
-      numero +=caracter
-    }
-}
 
-let gen = generar_caracteres(5, "n");
-console.log(gen); */
+/* function generar_caracteres(n, caracter) {
+    return caracter.repeat(n);
+}
+console.log(generar_caracteres(10, 'x')); */
+
 
 //EJERCICIO 8
 
-function sumarNumero (numeroo){
+/* function sumarNumero (numeroo){
   let i = 1;
   let suma = 0;
 
@@ -179,9 +175,89 @@ function sumarNumero (numeroo){
       suma += i;
       i++;
 
-      return `La suma de los números enteros positivos desde 1 hasta ${numeroo} es: ${suma}`
+    }
+    return `La suma de los números enteros positivos desde 1 hasta ${numeroo} es: ${suma}`
+}
+
+let sum = sumarNumero(10);
+console.log(sum); */
+
+// EJERCICIO 9
+
+/* function generarNumeroAleatorio(min, max) {
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+let numero = 0;
+let intentos = 0;
+
+while (numero !== 7) {
+  numero = generarNumeroAleatorio(1, 10);
+  intentos++;
+}
+
+console.log(`Se obtuvo un 7 después de ${intentos} intentos.`); */
+
+// EJERCICIO 10
+
+/* function numerosPares(num){
+  for (let i = 0; i <= 20; i++) {
+    if (i % 2 === 0) {
+        console.log(i);
+    }
+}
+}
+
+numpar = numerosPares(20);
+
+console.log(numpar); */
+
+// EJERCICIO 11
+
+/* function num1a5 (num){
+  if(num < 0 || num > 5){
+    console.log('numero invalido');
+    num1a5(parseInt(prompt('¡NUMERO INVALIDO! \n Ingrese un numero entre 1 y 5')))
+  }else{
+    console.log(`Su numero es ${num}`);
   }
 }
 
-let sum = sumarNumero(20);
-console.log(sum);
+num = num1a5(parseInt(prompt('Ingrese un numero entre 1 y 5')));
+
+console.log(num); */
+
+// EJERCICIO 12
+
+/* function fibonacci() {
+  let a = 0, b = 1, nume;
+
+  console.log(a);
+
+  for (let i = 1; i < 10; i++) {
+      console.log(b);
+      nume = a + b;
+      a = b;
+      b = nume;
+  }
+}
+
+console.log(fibonacci()); */
+
+// EJERCICIO 13
+
+function contraseña (ingreso){
+  let contra = "123";
+  let salir = "salir"
+
+  if(ingreso === contra){
+    console.log('1. la contraseña es correcta');
+  }else if(ingreso === "salir"){
+    console.log('Saliendo...');
+  }else{
+    console.log('Contraseña incorrecta');
+    contraseña(prompt(" 1. Ingrese la contraseña \n 2. salir").toLowerCase());
+  }
+}
+
+contraseña(prompt("Ingrese la contraseña"));
